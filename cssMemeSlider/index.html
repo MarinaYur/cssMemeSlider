@@ -7,45 +7,26 @@
     <title>cssMemeSlider</title>
   </head>
   <body>
-    <div class="slider">
-      <div class="slider__container">
-        <div class="slider__slide">
-          <img
-            src=""
-            alt="Slide 1"
-          />
+      <div class="slider">
+        <div class="slider__controls">
+          <label for="slide1"></label>
+          <label for="slide2"></label>
+          <label for="slide3"></label>
+          <label for="slide4"></label>
         </div>
-        <div class="slider__slide">
-          <img
-            src=""
-            alt="Slide 2"
-          />
-        </div>
-        <div class="slider__slide">
-          <img
-            src=""
-            alt="Slide 3"
-          />
-        </div>
-      </div>
-      <div class="captions-controls">
-        <div class="captions">
-          <div class="caption caption1">Подпись к Слайду 1</div>
-          <div class="caption caption2">Подпись к Слайду 2</div>
-          <div class="caption caption3">Подпись к Слайду 3</div>
+        <input type="radio" name="control" id="slide1" checked>
+          <input type="radio" name="control" id="slide2">
+          <input type="radio" name="control" id="slide3">
+          <input type="radio" name="control" id="slide4">
+        <div class="slider-container">
+
+          <div class="slide"><img src="/cssMemeSlider/assets/hare.jpg" alt="hare"></div>
+          <div class="slide"><img src="/cssMemeSlider/assets/cat.jpg" alt="cat"></div>
+          <div class="slide"><img src="/cssMemeSlider/assets/empty_bowl.webp" alt="empty_bowl"></div>
+          <div class="slide"><img src="/cssMemeSlider/assets/raccoon.jpg" alt="raccoon"></div>
         </div>
 
-        <div class="controls">
-          <label for="slide1" class="control">
-            <input type="radio" name="slider" id="slide1" checked>
-          </label>
-          <label for="slide2" class="control">
-            <input type="radio" name="slider" id="slide2">
-          </label>
-          <label for="slide3" class="control">
-            <input type="radio" name="slider" id="slide3"></label>
-        </div>
       </div>
-    </div>
+
   </body>
 </html>

@@ -16,6 +16,8 @@ body {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
+  width: 68rem;
+  max-width: 80%;
   border: 0.3rem solid rgb(7, 38, 96);
   border-radius: 4%;
   padding: 2rem;
@@ -40,16 +42,16 @@ body {
 .captions-controls {
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  width: 90%;
 }
 
 .captions-wrapper {
-  flex-basis: 80%;
+  flex-basis: 70%;
   overflow: hidden;
 }
 
 .caption {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: rgb(198, 211, 239);
   transition: 0.5s ease-out;
   width: 25%;
@@ -58,7 +60,7 @@ body {
 .captions {
   display: flex;
   width: 400%;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 .controls {
@@ -66,21 +68,50 @@ body {
   flex-basis: 20%;
 }
 
+.control {
+  width: 0.5rem;
+  height: 0.5rem;
+  padding: 0.5rem;
+   background-color: rgb(125, 154, 218);
+}
+
+.slider__controls {
+  display: flex;
+  /* gap: 1rem; */
+}
+
 .slider__controls label {
-  display: inline-block;
-  width: 1rem;
-  height: 1rem;
-  padding: 1rem;
-  background-color: rgb(187, 34, 34);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 2rem;
   border-radius: 50%;
   cursor: pointer;
   transition: 0.5s;
 }
-.slider__controls label:hover {
+
+label:hover .control1,
+label:hover .control2,
+label:hover .control3,
+label:hover .control4 {
   opacity: 1;
   transform: scale(1.1);
+  background-color: rgb(198, 211, 239);
   box-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
 }
+
+label[for="slide1"]:active,
+label[for="slide2"]:active,
+label[for="slide3"]:active,
+label[for="slide4"]:active {
+  opacity: 1;
+  transform: scale(1.1);
+  background-color: rgb(198, 211, 239);
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
+}
+
 input[name="control"],
 .captions {
   display: none;
@@ -92,7 +123,9 @@ input[name="control"],
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 20%;
 }
+
 #slide1:checked ~ .slider .slider-container {
   transform: translate(0);
 }
@@ -123,4 +156,24 @@ input[name="control"],
 #slide4:checked ~ .captions-controls .captions-wrapper .captions {
   display: flex;
   transform: translate(-75%);
+}
+
+#slide1:checked ~ .captions-controls .slider__controls label[for="slide1"] .control {
+  scale: 1.1;
+  border: 0.1rem solid #FFFFFF;
+}
+
+#slide2:checked ~ .captions-controls .slider__controls label[for="slide2"] .control {
+  scale: 1.1;
+  border: 0.1rem solid #FFFFFF;
+}
+
+#slide3:checked ~ .captions-controls .slider__controls label[for="slide3"] .control {
+  scale: 1.1;
+  border: 0.1rem solid #FFFFFF;
+}
+
+#slide4:checked ~ .captions-controls .slider__controls label[for="slide4"] .control {
+  scale: 1.1;
+  border: 0.1rem solid #FFFFFF;
 }

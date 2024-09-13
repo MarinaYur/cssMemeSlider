@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: cornflowerblue;
+  height: 100vh;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  border: 0.3rem solid rgb(7, 38, 96);
+  border-radius: 4%;
+  padding: 2rem;
+  background-color: rgb(7, 38, 96);
+}
+
+.slider {
+  border: 0.3rem solid rgb(7, 38, 96);
+
+  width: 64rem;
+  padding-bottom: 2rem;
+  border-radius: 10%;
+  overflow: hidden;
+}
+.slider-container {
+  display: flex;
+  width: 400%;
+  height: 100%;
+  transition: 0.5s ease-out;
+}
+
+.captions-controls {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.captions-wrapper {
+  flex-basis: 80%;
+  overflow: hidden;
+}
+
+.caption {
+  font-size: 2rem;
+  color: rgb(198, 211, 239);
+  transition: 0.5s ease-out;
+  width: 25%;
+}
+
+.captions {
+  display: flex;
+  width: 400%;
+  transition: 0.5s;
+}
+
+.controls {
+  margin-right: 1rem;
+  flex-basis: 20%;
+}
+
+.slider__controls label {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  padding: 1rem;
+  background-color: rgb(187, 34, 34);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.slider__controls label:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
+}
+input[name="control"],
+.captions {
+  display: none;
+}
+.slide {
+  width: 25%;
+}
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#slide1:checked ~ .slider .slider-container {
+  transform: translate(0);
+}
+#slide2:checked ~ .slider .slider-container {
+  transform: translate(-25%);
+}
+#slide3:checked ~ .slider .slider-container {
+  transform: translate(-50%);
+}
+#slide4:checked ~ .slider .slider-container {
+  transform: translate(-75%);
+}
+
+#slide1:checked ~ .captions-controls .captions-wrapper .captions {
+  display: flex;
+
+  transform: translate(0);
+}
+#slide2:checked ~ .captions-controls .captions-wrapper .captions {
+  display: flex;
+  transform: translate(-25%);
+}
+#slide3:checked ~ .captions-controls .captions-wrapper .captions {
+  display: flex;
+
+  transform: translate(-50%);
+}
+#slide4:checked ~ .captions-controls .captions-wrapper .captions {
+  display: flex;
+  transform: translate(-75%);
+}

@@ -10,6 +10,7 @@ body {
   align-items: center;
   background-color: cornflowerblue;
   height: 100vh;
+  cursor: default;
 }
 
 .wrapper {
@@ -97,13 +98,7 @@ body {
 label:hover .control1,
 label:hover .control2,
 label:hover .control3,
-label:hover .control4 {
-  opacity: 1;
-  transform: scale(1.1);
-  background-color: rgb(198, 211, 239);
-  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
-}
-
+label:hover .control4,
 label[for="slide1"]:active,
 label[for="slide2"]:active,
 label[for="slide3"]:active,
@@ -111,7 +106,7 @@ label[for="slide4"]:active {
   opacity: 1;
   transform: scale(1.1);
   background-color: rgb(198, 211, 239);
-  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0.125rem 0.0625rem rgba(0, 0, 0, 0.5);
 }
 
 input[name="control"],

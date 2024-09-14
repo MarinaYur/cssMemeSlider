@@ -43,6 +43,7 @@ body {
 .captions-controls {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   width: 90%;
 }
 
@@ -180,13 +181,13 @@ input[name="control"],
 }
 
 @media (max-width: 768px) {
+  .slider {
+    padding-bottom: 1rem;
+  }
   .captions-controls {
     flex-direction: column-reverse;
   }
   .slider__controls {
     align-self: center;
   }
-  /* .caption {
-    font-size: 2rem;
-  } */
 }

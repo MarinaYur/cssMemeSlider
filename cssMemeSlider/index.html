@@ -1,12 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href='style.css'>
-  <title>cssMemeSlider</title>
-</head>
-<body>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link type="Image/x-icon" href="assets/favicon.ico" rel="icon">
+    <title>cssMemeSlider</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <input type="radio" name="control" id="slide1" checked />
+      <input type="radio" name="control" id="slide2" />
+      <input type="radio" name="control" id="slide3" />
+      <input type="radio" name="control" id="slide4" />
+      <div class="captions-controls">
+        <div class="captions-wrapper">
+          <div class="captions">
+            <div class="caption caption1">
+              <p>When you're trying to hear where the free doughnuts were promised!</p>
+            </div>
+            <div class="caption caption2">
+              <p>When you find out that tomorrow is Monday...</p>
+            </div>
+            <div class="caption caption3">
+              <p>When you're not allowed to have another portion, but you still</p>
+              hope...
+            </div>
+            <div class="caption caption4">
+              <p>When the weekend is on the horizon!</p>
+            </div>
+          </div>
+        </div>
+        <div class="slider__controls">
+          <label for="slide1"><div class="control control1"></div></label>
+          <label for="slide2"><div class="control control2"></div></label>
+          <label for="slide3"><div class="control control3"></div></label>
+          <label for="slide4"><div class="control control4"></div></label>
+        </div>
+      </div>
+      <div class="slider">
+        <div class="slider-container">
+          <div class="slide">
+            <img src="assets/hare.jpg" alt="hare" />
+          </div>
+          <div class="slide">
+            <img src="assets/cat.jpg" alt="cat" />
+          </div>
+          <div class="slide">
+            <img src="assets/empty_bowl.webp" alt="empty_bowl" />
+          </div>
+          <div class="slide">
+            <img src="assets/raccoon.jpg" alt="raccoon" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

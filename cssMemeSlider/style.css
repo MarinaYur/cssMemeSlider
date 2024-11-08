@@ -10,6 +10,7 @@ body {
   align-items: center;
   background-color: cornflowerblue;
   cursor: default;
+  height: 100vh;
 }
 
 .wrapper {
@@ -18,7 +19,7 @@ body {
   align-items: center;
   width: 68rem;
   max-width: 80%;
-  /* min-height: 100vh; */
+  max-height: 100vh;
   border: 0.3rem solid rgb(7, 38, 96);
   border-radius: 4%;
   padding: 2rem;
@@ -54,7 +55,7 @@ body {
 }
 
 .caption {
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-size: clamp(1rem, 3vw, 2.5rem);
   color: rgb(198, 211, 239);
   transition: 0.5s ease-out;
   width: 25%;
@@ -118,7 +119,7 @@ input[name="control"],
 }
 .slide img {
   width: 100%;
-  /* height: 100%; */
+  height: 100%;
   object-fit: cover;
   border-radius: 20%;
 }
@@ -180,6 +181,7 @@ input[name="control"],
     padding-bottom: 1rem;
   }
   .captions-controls {
+    align-items: normal;
     flex-direction: column-reverse;
   }
   .slider__controls {
@@ -187,5 +189,14 @@ input[name="control"],
   }
   .caption p {
     width: 90%;
+  }
+}
+
+@media (max-width: 550px) {
+  .control {
+    padding: 0.4rem;
+  }
+  .wrapper {
+    padding: 1rem;
   }
 }
